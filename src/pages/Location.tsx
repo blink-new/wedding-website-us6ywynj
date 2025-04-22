@@ -1,36 +1,9 @@
 
-import { useEffect, useState } from 'react';
 import { Card, CardContent } from '../components/ui/card';
 import { MapPin, Car, Train, Plane } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const Location = () => {
-  const [mapLoaded, setMapLoaded] = useState(false);
-
-  useEffect(() => {
-    // Load Leaflet CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
-    link.crossOrigin = '';
-    document.head.appendChild(link);
-
-    // Load map after component mounts
-    const loadMap = async () => {
-      try {
-        const L = await import('leaflet');
-        const { MapContainer, TileLayer, Marker, Popup } = await import('react-leaflet');
-        
-        setMapLoaded(true);
-      } catch (error) {
-        console.error('Error loading map:', error);
-      }
-    };
-
-    loadMap();
-  }, []);
-
   return (
     <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-[#fdf8f5]">
       <div className="max-w-6xl mx-auto">
@@ -118,18 +91,16 @@ const Location = () => {
           </div>
 
           <div className="h-[600px] bg-gray-100 rounded-lg overflow-hidden">
-            {/* Placeholder for map */}
-            <div className="w-full h-full flex items-center justify-center">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1606553176384!2d-73.9764968!3d40.764438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f07d5da561%3A0x61f6aa300ba8339d!2sThe%20Plaza!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+            {/* Google Maps iframe */}
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1606553176384!2d-73.9764968!3d40.764438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f07d5da561%3A0x61f6aa300ba8339d!2sThe%20Plaza!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
 

@@ -1,6 +1,5 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'sonner';
 import { ThemeProvider } from './components/theme-provider';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -12,7 +11,6 @@ import Gallery from './pages/Gallery';
 function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="wedding-theme">
-      <Toaster position="top-right" />
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
