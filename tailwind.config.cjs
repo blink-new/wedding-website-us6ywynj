@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
@@ -14,17 +15,17 @@ module.exports = {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			primary: {
-  				'50': '#f0f9ff',
-  				'100': '#e0f2fe',
-  				'200': '#bae6fd',
-  				'300': '#7dd3fc',
-  				'400': '#38bdf8',
-  				'500': '#0ea5e9',
-  				'600': '#0284c7',
-  				'700': '#0369a1',
-  				'800': '#075985',
-  				'900': '#0c4a6e',
-  				'950': '#082f49',
+  				'50': '#fdf2f2',
+  				'100': '#fde8e8',
+  				'200': '#fbd5d5',
+  				'300': '#f8b4b4',
+  				'400': '#f98080',
+  				'500': '#f05252',
+  				'600': '#e02424',
+  				'700': '#c81e1e',
+  				'800': '#9b1c1c',
+  				'900': '#771d1d',
+  				'950': '#450a0a',
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
@@ -63,29 +64,29 @@ module.exports = {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			},
-  			sidebar: {
-  				DEFAULT: 'hsl(var(--sidebar-background))',
-  				foreground: 'hsl(var(--sidebar-foreground))',
-  				primary: 'hsl(var(--sidebar-primary))',
-  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  				accent: 'hsl(var(--sidebar-accent))',
-  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
-  			}
+        rose: {
+          50: '#fff1f2',
+          100: '#ffe4e6',
+          200: '#fecdd3',
+          300: '#fda4af',
+          400: '#fb7185',
+          500: '#f43f5e',
+          600: '#e11d48',
+          700: '#be123c',
+          800: '#9f1239',
+          900: '#881337',
+          950: '#4c0519',
+        },
   		},
   		fontFamily: {
   			sans: [
-  				'Inter var',
+  				'Inter',
   				'sans-serif'
-  			]
+  			],
+        serif: [
+          'Cormorant Garamond',
+          'serif'
+        ]
   		},
   		animation: {
   			'fade-in': 'fade-in 0.5s ease-out',
@@ -137,4 +138,4 @@ module.exports = {
   	}
   },
   plugins: [require("tailwindcss-animate")],
-} 
+}
